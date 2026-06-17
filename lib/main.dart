@@ -131,3 +131,6 @@ class _PantallaPrincipalState extends State<PantallaPrincipal> {
     );
   }
 }
+// TODO: Eliminar lista 'cajonesPiloto'.
+// TODO: Envolver mapa en StreamBuilder para Firebase.
+// TODO: Leer colección 'cajones_estacionamiento'.
