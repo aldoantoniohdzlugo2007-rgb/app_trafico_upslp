@@ -9,7 +9,8 @@
       "dependencies": [
         "cupertino_icons",
         "flutter",
-        "flutter_map"
+        "flutter_map",
+        "latlong2"
       ],
       "devDependencies": [
         "flutter_lints",
@@ -47,11 +48,19 @@
       "dependencies": []
     },
     {
+      "name": "latlong2",
+      "version": "0.9.1",
+      "dependencies": [
+        "intl"
+      ]
+    },
+    {
       "name": "flutter_map",
-      "version": "6.2.1",
+      "version": "7.0.2",
       "dependencies": [
         "async",
         "collection",
+        "dart_earcut",
         "flutter",
         "http",
         "latlong2",
@@ -164,6 +173,15 @@
       ]
     },
     {
+      "name": "intl",
+      "version": "0.20.2",
+      "dependencies": [
+        "clock",
+        "meta",
+        "path"
+      ]
+    },
+    {
       "name": "proj4dart",
       "version": "2.1.0",
       "dependencies": [
@@ -180,21 +198,6 @@
       ]
     },
     {
-      "name": "logger",
-      "version": "2.7.0",
-      "dependencies": [
-        "clock",
-        "meta"
-      ]
-    },
-    {
-      "name": "latlong2",
-      "version": "0.9.1",
-      "dependencies": [
-        "intl"
-      ]
-    },
-    {
       "name": "http",
       "version": "1.6.0",
       "dependencies": [
@@ -203,6 +206,11 @@
         "meta",
         "web"
       ]
+    },
+    {
+      "name": "dart_earcut",
+      "version": "1.2.0",
+      "dependencies": []
     },
     {
       "name": "async",
@@ -291,15 +299,6 @@
       ]
     },
     {
-      "name": "intl",
-      "version": "0.20.2",
-      "dependencies": [
-        "clock",
-        "meta",
-        "path"
-      ]
-    },
-    {
       "name": "web",
       "version": "1.1.1",
       "dependencies": []
@@ -337,6 +336,14 @@
       "name": "lists",
       "version": "1.0.1",
       "dependencies": [
+        "meta"
+      ]
+    },
+    {
+      "name": "logger",
+      "version": "2.7.0",
+      "dependencies": [
+        "clock",
         "meta"
       ]
     }
