@@ -198,6 +198,14 @@
       ]
     },
     {
+      "name": "logger",
+      "version": "2.7.0",
+      "dependencies": [
+        "clock",
+        "meta"
+      ]
+    },
+    {
       "name": "http",
       "version": "1.6.0",
       "dependencies": [
@@ -336,14 +344,6 @@
       "name": "lists",
       "version": "1.0.1",
       "dependencies": [
-        "meta"
-      ]
-    },
-    {
-      "name": "logger",
-      "version": "2.7.0",
-      "dependencies": [
-        "clock",
         "meta"
       ]
     }

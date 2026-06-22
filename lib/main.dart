@@ -1,7 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:flutter_map/flutter_map.dart';
-import 'package:latlong2/latlong2.dart';
+import 'package:latlong2/latlong.dart';
 
 void main() {
   runApp(const SmartCampusApp());
@@ -201,26 +201,27 @@ class MapaEstacionamiento extends StatelessWidget {
             initialZoom: 18.3,
             minZoom: 15,
             maxZoom: 20,
-            // Habilita explícitamente todas las interacciones (zoom, arrastrar)
             interactionOptions: const InteractionOptions(
               flags: InteractiveFlag.all,
             ),
           ),
           children: [
             TileLayer(
-              urlTemplate: 'https://tile.openstreetmap.org/{z}/{x}/{y}.png',
+              urlTemplate:
+                  'https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}.png',
+              subdomains: const ['a', 'b', 'c', 'd'],
               userAgentPackageName: 'com.upslp.smartcampus',
             ),
             MarkerLayer(
               markers: cajones.map((cajon) {
-                final seleccionado = cajonSeleccionado?.nombre == cajon.nombre;
+                final seleccionado =
+                    cajonSeleccionado?.nombre == cajon.nombre;
 
                 return Marker(
                   point: cajon.punto,
                   width: seleccionado ? 58 : 48,
                   height: seleccionado ? 58 : 48,
                   child: GestureDetector(
-                    // HitTestBehavior.opaque asegura que el tap se registre aunque se toque el borde
                     behavior: HitTestBehavior.opaque,
                     onTap: () => onSeleccionar(cajon),
                     child: MarcadorParking(
@@ -396,7 +397,8 @@ class TarjetaDetalle extends StatelessWidget {
               separatorBuilder: (_, __) => const Divider(height: 1),
               itemBuilder: (context, index) {
                 final cajon = cajones[index];
-                final seleccionado = cajonSeleccionado?.nombre == cajon.nombre;
+                final seleccionado =
+                    cajonSeleccionado?.nombre == cajon.nombre;
 
                 return Material(
                   color: seleccionado
